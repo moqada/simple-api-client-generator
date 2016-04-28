@@ -1,0 +1,7 @@
+.DS_Store
+.eslintcache
+npm-debug.log
+
+coverage/
+doc/
+node_modules/
