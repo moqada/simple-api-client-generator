@@ -3,7 +3,9 @@
   "description": "API Client Generator from JSON Hyper Schema",
   "version": "0.1.0",
   "author": "moqada <moqada@gmail.com>",
-  "bin": "bin/index.js",
+  "bin": {
+    "simple-api-client-generator": "bin/index.js"
+  },
   "bugs": {
     "url": "https://github.com/moqada/simple-api-client-generator/issues"
   },
