@@ -3,6 +3,7 @@
   "description": "API Client Generator from JSON Hyper Schema",
   "version": "0.1.0",
   "author": "moqada <moqada@gmail.com>",
+  "bin": "bin/index.js",
   "bugs": {
     "url": "https://github.com/moqada/simple-api-client-generator/issues"
   },
@@ -21,7 +22,9 @@
     "eslint-config-moqada": "^15.0.0",
     "eslint-plugin-node": "^1.1.0"
   },
-  "bin": "bin/index.js",
+  "engines": {
+    "node": ">=5"
+  },
   "files": [
     "bin",
     "lib"
@@ -36,9 +39,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/moqada/simple-api-client-generator.git"
-  },
-  "engines": {
-    "node": ">=5"
   },
   "scripts": {
     "lint": "eslint --cache {src,test}",
