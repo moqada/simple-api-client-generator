@@ -23,6 +23,7 @@
   },
   "bin": "bin/index.js",
   "files": [
+    "bin",
     "lib"
   ],
   "homepage": "https://github.com/moqada/simple-api-client-generator#readme",
