@@ -8,8 +8,8 @@
 
 > API Client Generator from JSON Hyper Schema.
 
-API Client has generated with Flow types for Request, Response, and Resource.
-And request parameters is validated with tv4 and power-assert on development phase.
+API Client has generated with [Flow](https://github.com/facebook/flow) types for Request, Response, and Resource.
+And request parameters is validated with [tv4](https://github.com/geraintluff/tv4) and [power-assert](https://github.com/power-assert-js/power-assert) on development phase.
 
 ***WIP***
 
