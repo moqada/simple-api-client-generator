@@ -1,7 +1,7 @@
 /* @flow */
 /* eslint-disable */
 import extend from 'extend';
-import assert from 'power-assert';
+import assert from '<%= assert %>';
 import tv4 from 'tv4';
 import uriTemplates from 'uri-templates';
 import SimpleAPIClient from '@moqada/simple-api-client';

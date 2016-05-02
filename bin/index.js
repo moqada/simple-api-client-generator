@@ -24,6 +24,12 @@ const argv = yargs
     description: 'output file path',
     type: 'string'
   })
+  .option('a', {
+    alias: 'assert',
+    description: 'assert library name',
+    'default': 'power-assert',
+    type: 'string'
+  })
   .help('help')
   .demand(1)
   .version(pkg.version)
@@ -47,7 +53,7 @@ function execute(args) {
         reject(err);
       } else {
         const schema = JSON.parse(res);
-        generate(schema, {name: args.name}).then(code => {
+        generate(schema, {assert: args.assert, name: args.name}).then(code => {
           if (!args.output) {
             process.stdout.write(code);
             return resolve(code);
