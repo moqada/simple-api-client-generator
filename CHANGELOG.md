@@ -1,3 +1,13 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/moqada/simple-api-client-generator/compare/v0.2.0...v0.2.1) (2016-05-05)
+
+
+### Bug Fixes
+
+* **sacg:** Fix hyphen separated rel is broken flow type ([b3881e6](https://github.com/moqada/simple-api-client-generator/commit/b3881e6))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/moqada/simple-api-client-generator/compare/v0.1.2...v0.2.0) (2016-05-02)
 
