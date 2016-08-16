@@ -15,7 +15,7 @@
     "lodash.template": "^4.2.4",
     "update-notifier": "^1.0.0",
     "uri-templates": "^0.2.0",
-    "yargs": "^4.6.0"
+    "yargs": "^5.0.0"
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
