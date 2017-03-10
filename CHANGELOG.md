@@ -1,3 +1,13 @@
+<a name="0.2.3"></a>
+## [0.2.3](https://github.com/moqada/simple-api-client-generator/compare/v0.2.2...v0.2.3) (2017-03-10)
+
+
+### Bug Fixes
+
+* **sacg:** Fix broken flowtype when request schema include hyphen. ([b0ae815](https://github.com/moqada/simple-api-client-generator/commit/b0ae815))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/moqada/simple-api-client-generator/compare/v0.2.1...v0.2.2) (2016-06-22)
 
