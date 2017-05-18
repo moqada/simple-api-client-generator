@@ -1,5 +1,7 @@
 # simple-api-client-generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/moqada/simple-api-client-generator.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
