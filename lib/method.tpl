@@ -1,7 +1,7 @@
 /**
  * <%= description %>
  */
-<%= name %>(<%= args.map(a => a.key + ': ' + a.flow).join(', ') %>): Promise<{body: <%= responseFlow %>, headers: Object, status: number}> {
+<%= name %> = (<%= args.map(a => a.key + ': ' + a.flow).join(', ') %>): Promise<{body: <%= responseFlow %>, headers: Object, status: number}> => {
   const tpl = uriTemplates('<%= href %>');
   const path = tpl.fill({<%= hrefArgs.map(a => a.key + ': ' + a.key).join(', ') %>});
   let opts = options || {};
