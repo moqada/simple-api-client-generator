@@ -22,7 +22,7 @@
     "codecov.io": "",
     "eslint": "^3.0.0",
     "eslint-config-moqada": "^18.0.0",
-    "eslint-plugin-node": "^5.0.0"
+    "eslint-plugin-node": "^6.0.0"
   },
   "engines": {
     "node": ">=5"
