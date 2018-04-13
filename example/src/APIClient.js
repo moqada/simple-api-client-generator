@@ -9,34 +9,34 @@ import type {APIOption} from '@moqada/simple-api-client';
 
 /* Resources */
 export type Info = {
-publishedAt?: string,
-id?: string,
-title?: string,
-content?: string
+  publishedAt?: string,
+  id?: string,
+  title?: string,
+  content?: string
 }
 
 export type Machine = {
-id?: string,
-name?: string
+  id?: string,
+  name?: string
 }
 
 export type User = {
-id: string,
-firstName: string,
-lastName: string,
-birthday: string,
-tel?: string,
-registeredAt: string,
-addressZip?: string,
-addressState?: string,
-addressCity?: string,
-addressLine1?: string,
-addressLine2?: string,
-machine?:   {
+  id: string,
+  firstName: string,
+  lastName: string,
+  birthday: string,
+  tel?: string,
+  registeredAt: string,
+  addressZip?: string,
+  addressState?: string,
+  addressCity?: string,
+  addressLine1?: string,
+  addressLine2?: string,
+  machine?: {
     id?: string,
     name?: string
   },
-infos?:     {
+  infos?: {
       publishedAt?: string,
       id?: string,
       title?: string,
@@ -46,36 +46,36 @@ infos?:     {
 
 /* Links */
 export type InfoInstancesResponse = {
-publishedAt?: string,
-id?: string,
-title?: string,
-content?: string
-}
+  publishedAt?: string,
+  id?: string,
+  title?: string,
+  content?: string
+}[]
 
 export type UserCreateRequest = {
-firstName: string,
-lastName: string,
-password: string,
-birthday: string
+  firstName: string,
+  lastName: string,
+  password: string,
+  birthday: string
 }
 
 export type UserCreateResponse = {
-id: string,
-firstName: string,
-lastName: string,
-birthday: string,
-tel?: string,
-registeredAt: string,
-addressZip?: string,
-addressState?: string,
-addressCity?: string,
-addressLine1?: string,
-addressLine2?: string,
-machine?:   {
+  id: string,
+  firstName: string,
+  lastName: string,
+  birthday: string,
+  tel?: string,
+  registeredAt: string,
+  addressZip?: string,
+  addressState?: string,
+  addressCity?: string,
+  addressLine1?: string,
+  addressLine2?: string,
+  machine?: {
     id?: string,
     name?: string
   },
-infos?:     {
+  infos?: {
       publishedAt?: string,
       id?: string,
       title?: string,
@@ -84,22 +84,22 @@ infos?:     {
 }
 
 export type UserSelfResponse = {
-id: string,
-firstName: string,
-lastName: string,
-birthday: string,
-tel?: string,
-registeredAt: string,
-addressZip?: string,
-addressState?: string,
-addressCity?: string,
-addressLine1?: string,
-addressLine2?: string,
-machine?:   {
+  id: string,
+  firstName: string,
+  lastName: string,
+  birthday: string,
+  tel?: string,
+  registeredAt: string,
+  addressZip?: string,
+  addressState?: string,
+  addressCity?: string,
+  addressLine1?: string,
+  addressLine2?: string,
+  machine?: {
     id?: string,
     name?: string
   },
-infos?:     {
+  infos?: {
       publishedAt?: string,
       id?: string,
       title?: string,
