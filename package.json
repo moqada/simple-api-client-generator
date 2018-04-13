@@ -22,7 +22,9 @@
     "codecov.io": "",
     "eslint": "^4.19.1",
     "eslint-config-moqada": "^19.0.0",
-    "eslint-plugin-node": "^6.0.1"
+    "eslint-plugin-node": "^6.0.1",
+    "npm-run-all": "^4.1.2",
+    "prettier-eslint-cli": "^4.7.1"
   },
   "engines": {
     "node": ">=5"
@@ -43,8 +45,11 @@
     "url": "https://github.com/moqada/simple-api-client-generator.git"
   },
   "scripts": {
-    "lint": "eslint --cache {src,test}",
-    "test": "npm run lint",
+    "example": "cd example && yarn && yarn build && yarn test",
+    "format": "prettier-eslint '{bin,lib}/**/*.js' --write",
+    "format-check": "git diff --exit-code bin lib",
+    "lint": "eslint --cache bin lib",
+    "test": "npm-run-all lint format-check example",
     "watch": "chokidar src test -c 'npm run -s lint'"
   }
 }
