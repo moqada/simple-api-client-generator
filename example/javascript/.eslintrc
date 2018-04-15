@@ -1,0 +1,5 @@
+env:
+  mocha: true
+rules:
+  node/no-unsupported-features: off
+  node/no-unpublished-import: off

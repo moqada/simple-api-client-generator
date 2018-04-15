@@ -1,10 +1,13 @@
+
 /* @flow */
+
 /* eslint-disable */
 import extend from 'extend';
 import assert from 'power-assert';
 import tv4 from 'tv4';
 import uriTemplates from 'uri-templates';
 import SimpleAPIClient from '@moqada/simple-api-client';
+
 import type {APIOption} from '@moqada/simple-api-client';
 
 /* Resources */
@@ -107,12 +110,19 @@ export type UserSelfResponse = {
     }[]
 }
 
+type APIResponse = {
+  body: any,
+  error: any,
+  headers: any,
+  status: number
+};
+
 /**
  * APIClient
  */
-export default class APIClient extends SimpleAPIClient {
+export default class APIClient extends SimpleAPIClient<APIResponse> {
 
-  toResponse(error: ?Object, response: ?Object): Object {
+  toResponse(error: any, response: any): APIResponse {
     return {
       body: response && response.body,
       error: error,
@@ -126,7 +136,7 @@ export default class APIClient extends SimpleAPIClient {
    */
   infoInstances(options?: APIOption): Promise<{body: InfoInstancesResponse, headers: Object, status: number}> {
     const tpl = uriTemplates('/info');
-    const path = tpl.fill({});
+    const path = tpl.fill(() => '');
     let opts = options || {};
     opts = extend(opts, options);
     return this.get(path, opts);
@@ -137,7 +147,7 @@ export default class APIClient extends SimpleAPIClient {
    */
   userCreate(params: UserCreateRequest, options?: APIOption): Promise<{body: UserCreateResponse, headers: Object, status: number}> {
     const tpl = uriTemplates('/users');
-    const path = tpl.fill({});
+    const path = tpl.fill(() => '');
     let opts = options || {};
     const data = params;
     assert.deepEqual(
@@ -156,7 +166,7 @@ export default class APIClient extends SimpleAPIClient {
    */
   userSelf(options?: APIOption): Promise<{body: UserSelfResponse, headers: Object, status: number}> {
     const tpl = uriTemplates('/users/me');
-    const path = tpl.fill({});
+    const path = tpl.fill(() => '');
     let opts = options || {};
     opts = extend(opts, options);
     return this.get(path, opts);

@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime", {"polyfill": false}
+    ]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env", {
+        "targets": {
+          "node": "5"
+        }
+      }
+    ],
+    "@babel/preset-flow"
+  ]
+}

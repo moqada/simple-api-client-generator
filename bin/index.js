@@ -32,6 +32,12 @@ const argv = yargs
     description: 'assert library name',
     type: 'string'
   })
+  .option('l', {
+    alias: 'lang',
+    choices: ['javascript', 'typescript'],
+    'default': 'javascript',
+    description: 'output language'
+  })
   .help('help')
   .demand(1)
   .version(pkg.version)
@@ -53,7 +59,11 @@ function execute(args) {
         reject(err);
       } else {
         const schema = JSON.parse(res);
-        generate(schema, {assert: args.assert, name: args.name}).then(code => {
+        generate(schema, {
+          assert: args.assert,
+          lang: args.lang,
+          name: args.name
+        }).then(code => {
           if (!args.output) {
             process.stdout.write(code);
             return resolve(code);

@@ -30,6 +30,8 @@ Usage: simple-api-client-generator [options] <JSON Schema>
 Options:
   -n, --name    API Client class name  [string] [default: "APIClient"]
   -o, --output  output file path  [string]
+  -a, --assert  assert library name  [string] [default: "power-assert"]
+  -l, --lang    output language  [choices: "javascript", "typescript"] [default: "javascript"]
   --help        Show help  [boolean]
   --version     Show version number  [boolean]
 

@@ -18,6 +18,7 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "chokidar-cli": "^1.2.0",
     "codecov.io": "",
     "eslint": "^4.19.1",
@@ -45,11 +46,11 @@
     "url": "https://github.com/moqada/simple-api-client-generator.git"
   },
   "scripts": {
-    "example": "cd example && yarn && yarn build && yarn test",
+    "example": "cd example && yarn && yarn test",
     "format": "prettier-eslint '{bin,lib}/**/*.js' --write",
     "format-check": "git diff --exit-code bin lib",
     "lint": "eslint --cache bin lib",
-    "test": "npm-run-all lint format-check example",
+    "test": "npm-run-all format lint format-check example",
     "watch": "chokidar src test -c 'npm run -s lint'"
   }
 }
