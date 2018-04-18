@@ -24,7 +24,10 @@
   const data = params || {};
   <% } %>
   assert.deepEqual(
-    tv4.validateMultiple(data, <%= JSON.stringify(request) %> ),
+    (() => {
+      const result = tv4.validateMultiple(data, <%= JSON.stringify(request) %> );
+      return {errors: result.errors, missing: result.missing, valid: result.valid};
+    })(),
     {errors: [], missing: [], valid: true}
   );
   opts = Object.assign(opts, {

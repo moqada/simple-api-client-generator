@@ -149,7 +149,10 @@ export default class APIClient extends SimpleAPIClient<APIResponse> {
     let opts = options || {};
     const data = params;
     assert.deepEqual(
-      tv4.validateMultiple(data, {"properties":{"firstName":{"description":"名","readOnly":true,"example":"わかる","type":["string"]},"lastName":{"description":"姓","readOnly":true,"example":"わたり","type":["string"]},"password":{"description":"パスワード","example":"pass","type":["string"]},"birthday":{"description":"生年月日","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}$","example":"1985-04-20","type":["string"]}},"type":["object"],"required":["firstName","lastName","email","password","birthday"]} ),
+      (() => {
+        const result = tv4.validateMultiple(data, {"properties":{"firstName":{"description":"名","readOnly":true,"example":"わかる","type":["string"]},"lastName":{"description":"姓","readOnly":true,"example":"わたり","type":["string"]},"password":{"description":"パスワード","example":"pass","type":["string"]},"birthday":{"description":"生年月日","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}$","example":"1985-04-20","type":["string"]}},"type":["object"],"required":["firstName","lastName","email","password","birthday"]} );
+        return {errors: result.errors, missing: result.missing, valid: result.valid};
+      })(),
       {errors: [], missing: [], valid: true}
     );
     opts = Object.assign(opts, {
