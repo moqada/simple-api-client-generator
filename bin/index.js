@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-'use strict';
 const fs = require('fs');
 const updateNotifier = require('update-notifier');
 const yargs = require('yargs');
@@ -12,11 +11,14 @@ updateNotifier({pkg}).notify();
 const argv = yargs
   .usage('Usage: simple-api-client-generator [options] <JSON Schema>')
   .example('simple-api-client-generator ./shema.json', 'Output API Client.')
-  .example('simple-api-client-generator -n AwesomeAPIClient ./shema.json', 'Output API Client given name')
+  .example(
+    'simple-api-client-generator -n AwesomeAPIClient ./shema.json',
+    'Output API Client given name'
+  )
   .option('n', {
     alias: 'name',
-    description: 'API Client class name',
     'default': 'APIClient',
+    description: 'API Client class name',
     type: 'string'
   })
   .option('o', {
@@ -26,18 +28,22 @@ const argv = yargs
   })
   .option('a', {
     alias: 'assert',
-    description: 'assert library name',
     'default': 'power-assert',
+    description: 'assert library name',
     type: 'string'
+  })
+  .option('l', {
+    alias: 'lang',
+    choices: ['javascript', 'typescript'],
+    'default': 'javascript',
+    description: 'output language'
   })
   .help('help')
   .demand(1)
   .version(pkg.version)
   .detectLocale(false)
   .wrap(null)
-  .strict()
-  .argv;
-
+  .strict().argv;
 
 /**
  * execute
@@ -53,7 +59,11 @@ function execute(args) {
         reject(err);
       } else {
         const schema = JSON.parse(res);
-        generate(schema, {assert: args.assert, name: args.name}).then(code => {
+        generate(schema, {
+          assert: args.assert,
+          lang: args.lang,
+          name: args.name
+        }).then(code => {
           if (!args.output) {
             process.stdout.write(code);
             return resolve(code);

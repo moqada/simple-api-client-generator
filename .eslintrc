@@ -2,3 +2,5 @@ parser: babel-eslint
 extends:
   - moqada
   - moqada/cli
+rules:
+  prefer-destructuring: off
