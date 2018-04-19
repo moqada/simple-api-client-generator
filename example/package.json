@@ -6,11 +6,13 @@
     "build": "npm-run-all build:*",
     "build:js": "simple-api-client-generator ./schema.json -o ./javascript/APIClient.js",
     "build:ts": "simple-api-client-generator ./schema.json -o ./typescript/APIClient.ts -l typescript",
+    "build:ts-asterisk": "simple-api-client-generator ./schema.json -o ./typescript/APIClient.asterisk.ts -l typescript -i asterisk",
     "diff": "git diff --exit-code ./typescript ./javascript",
     "flow": "flow",
     "test": "npm-run-all build diff flow test:*",
     "test:js": "mocha javascript/*.spec.js --require @babel/register",
-    "test:ts": "tsc --noEmit"
+    "test:ts": "tsc -p ./tsconfig.json --noEmit",
+    "test:ts-asterisk": "tsc -p ./tsconfig.asterisk.json --noEmit"
   },
   "author": "moqada <moqada@gmail.com>",
   "license": "MIT",

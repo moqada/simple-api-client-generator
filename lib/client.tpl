@@ -2,14 +2,21 @@
 /* @flow */
 <% } %>
 /* eslint-disable */
+<% if (importStyle === 'default' ) { %>
 import extend from 'extend';
 import assert from '<%= assert %>';
 import tv4 from 'tv4';
 import uriTemplates from 'uri-templates';
-import SimpleAPIClient from '@moqada/simple-api-client';
-<% if (lang === 'typescript' ) { %>
-import {APIOption} from '@moqada/simple-api-client';
 <% } else { %>
+import * as extend from 'extend';
+import * as assert from '<%= assert %>';
+import * as tv4 from 'tv4';
+import * as uriTemplates from 'uri-templates';
+<% } %>
+<% if (lang === 'typescript' ) { %>
+import SimpleAPIClient, {APIOption} from '@moqada/simple-api-client';
+<% } else { %>
+import SimpleAPIClient from '@moqada/simple-api-client';
 import type {APIOption} from '@moqada/simple-api-client';
 <% } %>
 

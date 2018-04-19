@@ -14,5 +14,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude": [
+    "typescript/APIClient.asterisk.ts"
+  ],
+  "include": [
+    "typescript/**/*"
+  ]
 }

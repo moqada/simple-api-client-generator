@@ -38,6 +38,12 @@ const argv = yargs
     'default': 'javascript',
     description: 'output language'
   })
+  .option('i', {
+    alias: 'import-style',
+    choices: ['default', 'asterisk'],
+    'default': 'default',
+    description: 'module import style'
+  })
   .help('help')
   .demand(1)
   .version(pkg.version)
@@ -61,6 +67,7 @@ function execute(args) {
         const schema = JSON.parse(res);
         generate(schema, {
           assert: args.assert,
+          importStyle: args['import-style'],
           lang: args.lang,
           name: args.name
         }).then(code => {
