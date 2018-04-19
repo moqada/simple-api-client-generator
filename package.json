@@ -1,7 +1,7 @@
 {
   "name": "@moqada/simple-api-client-generator",
   "description": "API Client Generator from JSON Hyper Schema",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "author": "moqada <moqada@gmail.com>",
   "bin": {
     "simple-api-client-generator": "bin/index.js"
