@@ -1,3 +1,21 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/moqada/simple-api-client-generator/compare/v0.2.3...v0.3.0) (2018-04-19)
+
+
+### Bug Fixes
+
+* **package:** update json-schema-ref-parser to version 4.0.0 ([#31](https://github.com/moqada/simple-api-client-generator/issues/31)) ([7777a6a](https://github.com/moqada/simple-api-client-generator/commit/7777a6a))
+* **package:** update yargs to version 9.0.1 ([#30](https://github.com/moqada/simple-api-client-generator/issues/30)) ([c7d93f0](https://github.com/moqada/simple-api-client-generator/commit/c7d93f0))
+* **sacg:** Fix throws AssertionError if validation result is valid ( tv4 >= v1.3.0) ([e5ec794](https://github.com/moqada/simple-api-client-generator/commit/e5ec794)), closes [#29](https://github.com/moqada/simple-api-client-generator/issues/29)
+* **sacg:** Fixed format of generated FlowType ([69f3be7](https://github.com/moqada/simple-api-client-generator/commit/69f3be7))
+
+
+### Features
+
+* **sacg:** Support TypeScript ([6ea4935](https://github.com/moqada/simple-api-client-generator/commit/6ea4935))
+
+
+
 <a name="0.2.3"></a>
 ## [0.2.3](https://github.com/moqada/simple-api-client-generator/compare/v0.2.2...v0.2.3) (2017-03-10)
 
