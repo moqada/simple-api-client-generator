@@ -1,3 +1,13 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/moqada/simple-api-client-generator/compare/v0.3.0...v0.4.0) (2018-04-20)
+
+
+### Features
+
+* **sacg:** Support import style for TypeScript ([050cb9c](https://github.com/moqada/simple-api-client-generator/commit/050cb9c))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/moqada/simple-api-client-generator/compare/v0.2.3...v0.3.0) (2018-04-19)
 
