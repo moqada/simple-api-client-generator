@@ -1,15 +1,12 @@
 
-/* @flow */
-
 /* eslint-disable */
 
-import extend from 'extend';
-import assert from 'power-assert';
-import tv4 from 'tv4';
-import uriTemplates from 'uri-templates';
+import * as extend from 'extend';
+import * as assert from 'power-assert';
+import * as tv4 from 'tv4';
+import * as uriTemplates from 'uri-templates';
 
-import SimpleAPIClient from '@moqada/simple-api-client';
-import type {APIOption} from '@moqada/simple-api-client';
+import SimpleAPIClient, {APIOption} from '@moqada/simple-api-client';
 
 /* Resources */
 export type Info = {
