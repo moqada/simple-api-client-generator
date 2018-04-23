@@ -6,7 +6,7 @@ import * as assert from 'power-assert';
 import * as tv4 from 'tv4';
 import * as uriTemplates from 'uri-templates';
 
-import SimpleAPIClient, {APIOption} from '@moqada/simple-api-client';
+import {SimpleAPIClient, APIOption} from '@moqada/simple-api-client';
 
 /* Resources */
 export type Info = {

@@ -14,7 +14,7 @@ import * as tv4 from 'tv4';
 import * as uriTemplates from 'uri-templates';
 <% } %>
 <% if (lang === 'typescript' ) { %>
-import SimpleAPIClient, {APIOption} from '@moqada/simple-api-client';
+import {SimpleAPIClient, APIOption} from '@moqada/simple-api-client';
 <% } else { %>
 import SimpleAPIClient from '@moqada/simple-api-client';
 import type {APIOption} from '@moqada/simple-api-client';
