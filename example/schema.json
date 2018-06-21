@@ -17,9 +17,9 @@
         "id": {
           "description": "ID",
           "readOnly": true,
-          "format": "uuid",
+          "format": "integer",
           "type": [
-            "string"
+            "number"
           ]
         },
         "title": {
@@ -54,6 +54,12 @@
           "method": "GET",
           "rel": "instances",
           "title": "お知らせ一覧"
+        },
+        {
+          "href": "/info/{(%23%2Fdefinitions%2Finfo%2Fdefinitions%2Fidentity)}",
+          "method": "GET",
+          "rel": "self",
+          "title": "お知らせ詳細"
         }
       ],
       "properties": {

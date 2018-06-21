@@ -4,7 +4,7 @@
 <%= name %>(<%= args.map(a => a.key + ': ' + a.flow).join(', ') %>): Promise<{body: <%= responseFlow %>, headers: Object, status: number}> {
   const tpl = uriTemplates('<%= href %>');
   <% if (hrefArgs.length) { %>
-  const pathSrc: {[key: string]: string} = {<%= hrefArgs.map(a => a.key + ': ' + a.key).join(', ') %>};
+  const pathSrc: {[key: string]: string} = {<%= hrefArgs.map(a => a.key + ': ' + a.key + '.toString()').join(', ') %>};
   const path = tpl.fill(name => pathSrc[name]);
   <% } else { %>
   const path = tpl.fill(() => '');

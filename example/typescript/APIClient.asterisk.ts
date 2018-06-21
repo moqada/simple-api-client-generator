@@ -11,7 +11,7 @@ import {SimpleAPIClient, APIOption} from '@moqada/simple-api-client';
 /* Resources */
 export type Info = {
   publishedAt?: string,
-  id?: string,
+  id?: number,
   title?: string,
   content?: string
 }
@@ -39,7 +39,7 @@ export type User = {
   },
   infos?: {
       publishedAt?: string,
-      id?: string,
+      id?: number,
       title?: string,
       content?: string
     }[]
@@ -48,10 +48,17 @@ export type User = {
 /* Links */
 export type InfoInstancesResponse = {
   publishedAt?: string,
-  id?: string,
+  id?: number,
   title?: string,
   content?: string
 }[]
+
+export type InfoSelfResponse = {
+  publishedAt?: string,
+  id?: number,
+  title?: string,
+  content?: string
+}
 
 export type UserCreateRequest = {
   firstName: string,
@@ -78,7 +85,7 @@ export type UserCreateResponse = {
   },
   infos?: {
       publishedAt?: string,
-      id?: string,
+      id?: number,
       title?: string,
       content?: string
     }[]
@@ -102,7 +109,7 @@ export type UserSelfResponse = {
   },
   infos?: {
       publishedAt?: string,
-      id?: string,
+      id?: number,
       title?: string,
       content?: string
     }[]
@@ -135,6 +142,18 @@ export default class APIClient extends SimpleAPIClient<APIResponse> {
   infoInstances(options?: APIOption): Promise<{body: InfoInstancesResponse, headers: Object, status: number}> {
     const tpl = uriTemplates('/info');
     const path = tpl.fill(() => '');
+    let opts = options || {};
+    opts = extend(opts, options);
+    return this.get(path, opts);
+  }
+
+  /**
+   * 
+   */
+  infoSelf(id0: number, options?: APIOption): Promise<{body: InfoSelfResponse, headers: Object, status: number}> {
+    const tpl = uriTemplates('/info/{id0}');
+    const pathSrc: {[key: string]: string} = {id0: id0.toString()};
+    const path = tpl.fill(name => pathSrc[name]);
     let opts = options || {};
     opts = extend(opts, options);
     return this.get(path, opts);
