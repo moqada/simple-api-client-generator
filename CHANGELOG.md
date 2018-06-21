@@ -1,3 +1,13 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/moqada/simple-api-client-generator/compare/v0.5.0...v0.5.1) (2018-06-21)
+
+
+### Bug Fixes
+
+* **sacg:** Fix flow error in specific patterns ([71d7469](https://github.com/moqada/simple-api-client-generator/commit/71d7469))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/moqada/simple-api-client-generator/compare/v0.4.0...v0.5.0) (2018-04-23)
 
