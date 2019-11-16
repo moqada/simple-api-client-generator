@@ -16,7 +16,7 @@
     "lodash.template": "^4.4.0",
     "update-notifier": "^2.4.0",
     "uri-templates": "^0.2.0",
-    "yargs": "^11.0.0"
+    "yargs": "^15.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
