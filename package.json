@@ -24,7 +24,7 @@
     "codecov.io": "",
     "eslint": "^4.19.1",
     "eslint-config-moqada": "^19.0.0",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^11.0.0",
     "npm-run-all": "^4.1.2",
     "prettier-eslint-cli": "^4.7.1"
   },
