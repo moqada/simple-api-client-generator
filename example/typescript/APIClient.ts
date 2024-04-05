@@ -33,6 +33,7 @@ export type User = {
   addressCity?: string,
   addressLine1?: string,
   addressLine2?: string,
+  gender?: 'na' | 'male' | 'female',
   machine?: {
     id?: string,
     name?: string
@@ -64,7 +65,8 @@ export type UserCreateRequest = {
   firstName: string,
   lastName: string,
   password: string,
-  birthday: string
+  birthday: string,
+  gender: 'na' | 'male' | 'female'
 }
 
 export type UserCreateResponse = {
@@ -79,6 +81,7 @@ export type UserCreateResponse = {
   addressCity?: string,
   addressLine1?: string,
   addressLine2?: string,
+  gender?: 'na' | 'male' | 'female',
   machine?: {
     id?: string,
     name?: string
@@ -103,6 +106,7 @@ export type UserSelfResponse = {
   addressCity?: string,
   addressLine1?: string,
   addressLine2?: string,
+  gender?: 'na' | 'male' | 'female',
   machine?: {
     id?: string,
     name?: string
@@ -169,7 +173,7 @@ export default class APIClient extends SimpleAPIClient<APIResponse> {
     const data = params;
     assert.deepEqual(
       (() => {
-        const result = tv4.validateMultiple(data, {"properties":{"firstName":{"description":"名","readOnly":true,"example":"わかる","type":["string"]},"lastName":{"description":"姓","readOnly":true,"example":"わたり","type":["string"]},"password":{"description":"パスワード","example":"pass","type":["string"]},"birthday":{"description":"生年月日","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}$","example":"1985-04-20","type":["string"]}},"type":["object"],"required":["firstName","lastName","email","password","birthday"]} );
+        const result = tv4.validateMultiple(data, {"properties":{"firstName":{"description":"名","readOnly":true,"example":"わかる","type":["string"]},"lastName":{"description":"姓","readOnly":true,"example":"わたり","type":["string"]},"password":{"description":"パスワード","example":"pass","type":["string"]},"birthday":{"description":"生年月日","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}$","example":"1985-04-20","type":["string"]},"gender":{"description":"性別","example":"male","type":["string"],"enum":["na","male","female"]}},"type":["object"],"required":["firstName","lastName","email","password","birthday","gender"]} );
         return {errors: result.errors, missing: result.missing, valid: result.valid};
       })(),
       {errors: [], missing: [], valid: true}
