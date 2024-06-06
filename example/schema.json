@@ -215,6 +215,18 @@
           "type": [
             "string"
           ]
+        },
+        "gender": {
+          "description": "性別",
+          "example": "male",
+          "type": [
+            "string"
+          ],
+          "enum": [
+            "na",
+            "male",
+            "female"
+          ]
         }
       },
       "links": [
@@ -236,6 +248,9 @@
               },
               "birthday": {
                 "$ref": "#/definitions/user/definitions/birthday"
+              },
+              "gender": {
+                "$ref": "#/definitions/user/definitions/gender"
               }
             },
             "type": [
@@ -246,7 +261,8 @@
               "lastName",
               "email",
               "password",
-              "birthday"
+              "birthday",
+              "gender"
             ]
           },
           "title": "登録"
@@ -296,6 +312,9 @@
         },
         "addressLine2": {
           "$ref": "#/definitions/user/definitions/addressLine2"
+        },
+        "gender": {
+          "$ref": "#/definitions/user/definitions/gender"
         },
         "machine": {
           "$ref": "#/definitions/machine"
